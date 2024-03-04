@@ -1,3 +1,5 @@
 ---
 default: true
 extends: null
+
+line-length: false
