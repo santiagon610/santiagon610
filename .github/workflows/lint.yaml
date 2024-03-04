@@ -1,7 +1,7 @@
 ---
 
 name: Linter
-on:
+on: # yamllint disable-line rule:truthy
   push:
   pull_request:
     branches:
@@ -9,6 +9,7 @@ on:
 
 jobs:
   lint:
+    name: Run linters
     runs-on: ubuntu-latest
     steps:
       - name: Checkout SCM
