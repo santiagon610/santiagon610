@@ -16,10 +16,6 @@ jobs:
 
       - name: Lint YAML files
         uses: ibiqlik/action-yamllint@v3
-        with:
-          config_file: ".github/yamllint.yaml"
 
       - name: Lint Markdown files
         uses: articulate/actions-markdownlint@v1
-        with:
-          config: ".github/markdownlint.yaml"
