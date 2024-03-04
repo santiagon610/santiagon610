@@ -1,0 +1,21 @@
+---
+name: Linter
+on:  # yamllint disable-line rule:truthy
+  push:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    name: Run linters
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout SCM
+        uses: actions/checkout@v4
+
+      - name: Lint YAML files
+        uses: ibiqlik/action-yamllint@v3
+
+      - name: Lint Markdown files
+        uses: articulate/actions-markdownlint@v1
